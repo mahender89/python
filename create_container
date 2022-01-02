@@ -1,0 +1,11 @@
+import subprocess
+image= input("Enter the image name to be downloaded: ")
+container= input("Enter thr container name: ")
+detach= input("Do you want to run detached mode(y/n): ")
+if detach =='y':
+     subprocess.call("docker run -P --name %s -d %s"%(container,image), shell=True)
+elif detach =='n':
+    subprocess.call("docker run -P --name %s %s"%(container,image), shell=True)
+else:
+    print("Invalid Option")
+

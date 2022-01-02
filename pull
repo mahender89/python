@@ -1,0 +1,4 @@
+import subprocess
+image= input("Enter the image nameto be downloaded: ")
+subprocess.call("docker pull %s"%image, shell=True)
+
